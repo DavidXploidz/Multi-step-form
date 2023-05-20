@@ -1,6 +1,7 @@
 .select-plan__grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 195px;
     gap: 1rem;
     /* margin-top: 2.5rem; */
 }
@@ -16,6 +17,47 @@
 .select-plan__card--active{
     border: 1px solid var(--PurplishBlue);
     background-color: var(--Magnolia);
+}
+.select-plan__toggle{
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Magnolia);
+    border-radius: var(--radius-sm);
+}
+.toggle__p{
+    font-weight: 500;
+    color: var(--CoolGray);
+    justify-self: center;
+}
+.toggle__p--active{
+    color: var(--MarineBlue);
+}
+.toggle__icon{
+    justify-self: center;
+    width: 50px;
+    height: 25px;
+    background-color: var(--MarineBlue);
+    border-radius: var(--radius-pill);
+    position: relative;
+}
+.toggle__icon:hover{
+    cursor: pointer;
+}
+.toggle__icon::after{
+    content: '';
+    position: absolute;
+    background-color: var(--White);
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    top: calc(50% - 8px);
+    right: 4px;
+}
+.toggle__icon--reverse{
+    transform: rotate(180deg);
 }
 .card__content{
     display: grid;

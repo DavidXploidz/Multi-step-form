@@ -3,7 +3,6 @@ import { useState } from 'react'
 import Subtitle from './Subtitle'
 import Title from './Title'
 import useMulti from '../hooks/useMulti'
-import StepBar from './StepBar'
 
 export default function YourInfo() {
 

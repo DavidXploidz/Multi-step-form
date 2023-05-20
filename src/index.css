@@ -18,6 +18,7 @@
   --radius-sm: .6rem;
   --radius-md: 1rem;
   --radius-xs: .4rem;
+  --radius-pill: 30px;
 }
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
