@@ -1,0 +1,35 @@
+.select-plan__grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    /* margin-top: 2.5rem; */
+}
+.select-plan__card{
+    border: 1px solid var(--LightGray);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+}
+.select-plan__card:hover{
+    cursor: pointer;
+    border: 1px solid var(--PurplishBlue);
+}
+.select-plan__card--active{
+    border: 1px solid var(--PurplishBlue);
+    background-color: var(--Magnolia);
+}
+.card__content{
+    display: grid;
+    row-gap: 5px;
+    margin-top: 3rem;
+}
+.card__title{
+    color: var(--MarineBlue);
+    font-weight: 500;
+    font-size: 18px;
+}
+.card__price{
+    color: var(--CoolGray);
+}
+.card__trial{
+    color: var(--MarineBlue);
+}

@@ -1,0 +1,22 @@
+.your-info{
+
+}
+.your-info__form{
+    /* margin-top: 2rem; */
+}
+.your-info__content{
+    display: grid;
+    margin-bottom: 1rem;
+}
+.your-info__label{
+    text-transform: capitalize;
+    color: var(--MarineBlue);
+    margin-bottom: .3rem;
+}
+.your-info__input{
+    padding: .7rem 1rem;
+    display: block;
+    width: 100%;
+    border: 1px solid var(--CoolGray);
+    border-radius: var(--radius-xs);
+}

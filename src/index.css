@@ -1,0 +1,91 @@
+:root{
+  /* ## Colors */
+  /* ### Primary */
+  --MarineBlue: hsl(213, 96%, 18%);
+  --PurplishBlue: hsl(243, 100%, 62%);
+  --PastelBlue: hsl(228, 100%, 84%);
+  --LightBlue: hsl(206, 94%, 87%);
+  --StrawberryRed: hsl(354, 84%, 57%);
+
+  /* ### Neutral */
+  --CoolGray: hsl(231, 11%, 63%);
+  --LightGray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 0%, 100%);
+
+  --fuentePrincipal: 'Ubuntu', sans-serif;
+  --radius-sm: .6rem;
+  --radius-md: 1rem;
+  --radius-xs: .4rem;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+body{
+  font-size: 16px;
+  font-family: var(--fuentePrincipal);
+  min-height: 100vh;
+  background-color: var(--Magnolia);
+  display: grid;
+  align-items: center;
+}
+img, picture, svg, video{
+  display: block;
+  max-width: 100%;
+}
+input, textarea, button, select{
+  font: inherit;
+}
+/* Utilidades */
+.contenedor{
+  max-width: 120rem;
+  margin-inline: auto;
+  width: 90%;
+}
+.main-title{
+  color: var(--MarineBlue);
+  font-weight: bold;
+  font-size: 2rem;
+}
+.sub-title{
+  color: var(--CoolGray);
+  font-weight: 400;
+  margin-top: .5rem;
+  margin-bottom: 2rem;
+}
+.btn-primary{
+  text-transform: capitalize;
+  background-color: var(--MarineBlue);
+  padding: .7rem 1.5rem;
+  font-weight: 500;
+  border: none;
+  color: var(--White);
+  border-radius: var(--radius-xs);
+  transition: all .2s ease-in-out;
+}
+.btn-primary--back{
+  background-color: transparent;
+  color: var(--CoolGray);
+}
+.btn-primary:hover{
+  filter: opacity(80%);
+  cursor: pointer;
+}
+.container{
+  padding: 2rem 2rem 0rem 2rem;
+  width: 90%;
+  height: 100%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-rows: 6rem 1fr 5rem;
+}
