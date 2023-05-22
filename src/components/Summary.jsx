@@ -23,11 +23,11 @@ export default function Summary() {
                     <p className='summary__title'>{plan_frecuency === 'monthly' ? `$${price}/mo` : `$${price}/yr`}</p>
                 </div>
                 {adds.map((add, index )=> {
-                    const {name, price} = add;
+                    const {name, prices} = add;
                     return(
                         <div key={index} className='summary__content'>
                             <p className='summary__add'>{name}</p>
-                            <p className='summary__price'>{plan_frecuency === 'monthly' ? `$${price}/mo` : `$${price}/yr`}</p>
+                            <p className='summary__price'>{plan_frecuency === 'monthly' ? `$${prices.priceMonth}/mo` : `$${prices.priceYear}/yr`}</p>
                         </div>
                     )
                 })}

@@ -10,7 +10,7 @@ export default function SelectPlan() {
 
     const [plan, setPlan] = useState({});
 
-    const [frecuency, setFrecuency] = useState(true);
+    const [frecuency, setFrecuency] = useState(false);
     const [selected, setSelected] = useState(null);
 
     useEffect(() => {

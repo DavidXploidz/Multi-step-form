@@ -2,7 +2,7 @@ import '../styles/PickAdds.css'
 import Title from './Title'
 import Subtitle from './Subtitle'
 import useMulti from '../hooks/useMulti'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function PickAdds() {
 
@@ -14,20 +14,26 @@ export default function PickAdds() {
         online: {
             name: 'Online service',
             desc: 'Access to multiplayer games',
-            price: 1,
-            frecuency: 'month',
+            prices: {
+                priceMonth: 1,
+                priceYear: 10
+            }
         },
         storage: {
             name: 'Larger storage',
             desc: 'Extra 1 TB of cloud save',
-            price: 2,
-            frecuency: 'month',
+            prices: {
+                priceMonth: 2,
+                priceYear: 20
+            }
         },
         profile: {
             name: 'Customizable profile',
             desc: 'Custom theme on your profile',
-            price: 2,
-            frecuency: 'month',
+            prices: {
+                priceMonth: 2,
+                priceYear: 20
+            }
         },
     });
 
@@ -53,17 +59,17 @@ export default function PickAdds() {
         <div className='adds__container'>
             <div className='adds__card'>
                 <input className='adds__input' id="online" type="checkbox" onClick={ (e) => handleClickExtras(e, extras.online) }  />
-                <p className='adds__title'>Online service <span className='adds__sub'>Access to multiplayer games</span></p>
+                <label htmlFor='online' className='adds__title'>Online service <span className='adds__sub'>Access to multiplayer games</span></label>
                 <p className='adds__price'>{plan_frecuency === 'monthly' ? '+$1/mo' : '+$10/yr'}</p>
             </div>
             <div className='adds__card'>
                 <input className='adds__input' id='storage' type="checkbox" onClick={ (e) => handleClickExtras(e, extras.storage) }  />
-                <p className='adds__title'>Large storage <span className='adds__sub'>Extra 1 TB of cloud save</span></p>
+                <label htmlFor='storage' className='adds__title'>Large storage <span className='adds__sub'>Extra 1 TB of cloud save</span></label>
                 <p className='adds__price'>{plan_frecuency === 'monthly' ? '+$2/mo' : '+$20/yr'}</p>
             </div>
             <div className='adds__card'>
                 <input className='adds__input' id='profile' type="checkbox" onClick={ (e) => handleClickExtras(e, extras.profile) } />
-                <p className='adds__title'>Customizable profile <span className='adds__sub'>Custom theme on your profile</span></p>
+                <label htmlFor='profile' className='adds__title'>Customizable profile <span className='adds__sub'>Custom theme on your profile</span></label>
                 <p className='adds__price'>{plan_frecuency === 'monthly' ? '+$2/mo' : '+$20/yr'}</p>
             </div>
         </div>
