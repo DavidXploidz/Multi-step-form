@@ -4,7 +4,7 @@ import '../styles/Aside.css'
 
 export default function Aside() {
 
-    const {mostrarInfo, mostrarPlan, mostrarAdds} = useMulti();
+    const {mostrarInfo, mostrarPlan, mostrarAdds, mostrarSummary} = useMulti();
 
   return (
     <aside className='aside'>
@@ -21,7 +21,7 @@ export default function Aside() {
           <p className='aside__p'>step 3 <span className='aside__span'>add-ons</span></p>
         </div>
         <div className='aside__step'>
-          <p className='aside__circle'>4</p>
+          <p className={`aside__circle ${mostrarSummary ? 'aside__circle--active ' : ''}`}>4</p>
           <p className='aside__p'>step 4 <span className='aside__span'>summary</span></p>
         </div>
     </aside>

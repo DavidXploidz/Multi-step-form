@@ -1,0 +1,35 @@
+.summary{
+}
+.summary__resume{
+    padding: 1.5rem;
+    background-color: var(--Magnolia);
+    border-radius: var(--radius-sm);
+}
+.summary__resume--total{
+    background-color: transparent;
+}
+.summary__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.summary__content:last-child{
+    margin-bottom: 0;
+}
+.summary__title{
+    color: var(--MarineBlue);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.summary__add{
+    color: var(--CoolGray);
+}
+.summary__price{
+    color: var(--MarineBlue);
+}
+.summary__total{
+    color: var(--PurplishBlue);
+    font-size: 24px;
+    font-weight: 500;
+}

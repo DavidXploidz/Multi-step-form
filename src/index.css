@@ -78,6 +78,9 @@ input, textarea, button, select{
   background-color: transparent;
   color: var(--CoolGray);
 }
+.btn-primaty--confirm{
+  background-color: var(--PurplishBlue);
+}
 .btn-primary:hover{
   filter: opacity(80%);
   cursor: pointer;

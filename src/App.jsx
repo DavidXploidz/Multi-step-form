@@ -4,10 +4,11 @@ import YourInfo from "./components/YourInfo"
 import useMulti from "./hooks/useMulti"
 import SelectPlan from "./components/SelectPlan";
 import PickAdds from "./components/PickAdds";
+import Summary from "./components/Summary";
 
 function App() {
 
-  const { mostrarInfo, mostrarPlan, mostrarAdds } = useMulti();
+  const { mostrarInfo, mostrarPlan, mostrarAdds, mostrarSummary } = useMulti();
  
   return (
     <main className="main contenedor">
@@ -21,6 +22,9 @@ function App() {
         )}
         {mostrarAdds && (
           <PickAdds />
+        )}
+        {mostrarSummary && (
+          <Summary />
         )}
       </div>
     </main>
