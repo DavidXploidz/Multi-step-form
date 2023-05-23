@@ -53,6 +53,13 @@ input, textarea, button, select{
   margin-inline: auto;
   width: 90%;
 }
+@media (min-width: 768px){ 
+  .contenedor{
+    max-width: 120rem;
+    margin-inline: auto;
+    width: 70%;
+  }
+}
 .main-title{
   color: var(--MarineBlue);
   font-weight: bold;
