@@ -6,7 +6,7 @@ import '../styles/Success.css'
 export default function Success() {
   return (
     <div className='success'>
-        <img src="/images/icon-thank-you.svg" alt="icon successful" />
+        <img src="images/icon-thank-you.svg" alt="icon successful" />
         <Title>Thank you!</Title>
         <Subtitle>
             Thanks for confirming your subscription! We hope you have fun 

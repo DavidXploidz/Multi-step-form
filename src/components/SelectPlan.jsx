@@ -68,7 +68,7 @@ export default function SelectPlan() {
         </div>
         <div className="select-plan__grid">
             <div className={`select-plan__card ${selected === 'arcade' ? 'select-plan__card--active' : ''} `}  onClick={() => handleClickPlan('arcade') } >
-                <img src="/images/icon-arcade.svg" alt="icon arcade" />
+                <img src="images/icon-arcade.svg" alt="icon arcade" />
                 <div className='card__content'> 
                     <h3 className="card__title">Arcade</h3>
                     {!frecuency ? <p className="card__price">$90/yr</p> : <p className="card__price">$9/mo</p> }
@@ -76,7 +76,7 @@ export default function SelectPlan() {
                 </div>
             </div>
             <div className={`select-plan__card ${selected === 'advanced' ? 'select-plan__card--active' : ''} `}  onClick={() => handleClickPlan('advanced') } >
-                <img src="/images/icon-advanced.svg" alt="icon arcade" />
+                <img src="images/icon-advanced.svg" alt="icon arcade" />
                 <div className='card__content'> 
                     <h3 className="card__title">Advanced</h3>
                     {!frecuency ? <p className="card__price">$120/yr</p> : <p className="card__price">$12/mo</p> }
@@ -84,7 +84,7 @@ export default function SelectPlan() {
                 </div>
             </div>
             <div className={`select-plan__card ${selected === 'pro' ? 'select-plan__card--active' : ''} `}  onClick={() => handleClickPlan('pro') }>
-                <img src="/images/icon-pro.svg" alt="icon arcade" />
+                <img src="images/icon-pro.svg" alt="icon arcade" />
                 <div className='card__content'> 
                     <h3 className="card__title">Pro</h3>
                     {!frecuency ? <p className="card__price">$150/yr</p> : <p className="card__price">$15/mo</p> }
