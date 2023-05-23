@@ -12,6 +12,10 @@
     margin-bottom: 1rem;
     /* background-color: var(--Magnolia); */
 }
+.adds__card--active{
+    background-color: var(--Magnolia);
+    border: 1px solid var(--MarineBlue);
+}
 .adds__title{
     color: var(--MarineBlue);
     font-weight: 500;

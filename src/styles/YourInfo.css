@@ -7,6 +7,19 @@
 .your-info__content{
     display: grid;
     margin-bottom: 1rem;
+    position: relative;
+}
+.your-info__content--error::after{
+    content: 'This field is required';
+    color: var(--StrawberryRed);
+    font-weight: 500;
+    position: absolute;
+    top: -5px;
+    right: 0;
+}
+.your-info__content--error input{
+    border: 1px solid var(--StrawberryRed);
+    color: red;
 }
 .your-info__label{
     text-transform: capitalize;

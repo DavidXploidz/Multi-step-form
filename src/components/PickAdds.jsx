@@ -39,14 +39,22 @@ export default function PickAdds() {
 
     const [adds, setAdds] = useState([])
 
+    const [active, setActive] = useState({
+        online: false,
+        storage: false,
+        profile: false
+    });
+
     const handleClickExtras = (e, extra) => {
         const {id, checked} = e.target;
 
         if (checked && !adds.includes(extra)) {
             setAdds([...adds, extra]);
+            setActive({...active, [id]:true});
         } else if (!checked && adds.includes(extra)) {
             const updatedAdds = adds.filter((item) => item !== extra);
             setAdds(updatedAdds);
+            setActive({...active, [id]:false});
         }
     }
 
@@ -57,17 +65,17 @@ export default function PickAdds() {
             <Subtitle>Add-ons help enhance your gaming experience.</Subtitle>
         </div>
         <div className='adds__container'>
-            <div className='adds__card'>
+            <div className={`${active.online && 'adds__card--active'} adds__card`}>
                 <input className='adds__input' id="online" type="checkbox" onClick={ (e) => handleClickExtras(e, extras.online) }  />
                 <label htmlFor='online' className='adds__title'>Online service <span className='adds__sub'>Access to multiplayer games</span></label>
                 <p className='adds__price'>{plan_frecuency === 'monthly' ? '+$1/mo' : '+$10/yr'}</p>
             </div>
-            <div className='adds__card'>
+            <div className={`${active.storage && 'adds__card--active'} adds__card`}>
                 <input className='adds__input' id='storage' type="checkbox" onClick={ (e) => handleClickExtras(e, extras.storage) }  />
                 <label htmlFor='storage' className='adds__title'>Large storage <span className='adds__sub'>Extra 1 TB of cloud save</span></label>
                 <p className='adds__price'>{plan_frecuency === 'monthly' ? '+$2/mo' : '+$20/yr'}</p>
             </div>
-            <div className='adds__card'>
+            <div className={`${active.profile && 'adds__card--active'} adds__card`}>
                 <input className='adds__input' id='profile' type="checkbox" onClick={ (e) => handleClickExtras(e, extras.profile) } />
                 <label htmlFor='profile' className='adds__title'>Customizable profile <span className='adds__sub'>Custom theme on your profile</span></label>
                 <p className='adds__price'>{plan_frecuency === 'monthly' ? '+$2/mo' : '+$20/yr'}</p>

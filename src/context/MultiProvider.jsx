@@ -9,6 +9,7 @@ const MultiProvider = ({children}) => {
     const [mostrarPlan, setMostrarPlan] = useState(false);
     const [mostrarAdds, setMostrarAdds] = useState(false);
     const [mostrarSummary, setMostrarSummary] = useState(false);
+    const [mostrarConfirm, setMostrarConfirm] = useState(false);
 
     const handleSubmitInfo = (name, email, phone) => {
         setObjPlan({
@@ -37,6 +38,7 @@ const MultiProvider = ({children}) => {
         setMostrarInfo(false)
         setMostrarPlan(true)
         setMostrarAdds(false)
+        setMostrarSummary(false)
 
     }
 
@@ -55,6 +57,9 @@ const MultiProvider = ({children}) => {
         setMostrarSummary(false)
     }
 
+    const handleSubmitConfirm = () => {
+        setMostrarConfirm(true)
+    }
 
     return (
         <MultiContext.Provider
@@ -69,7 +74,9 @@ const MultiProvider = ({children}) => {
                 handleVolverPlan,
                 mostrarSummary,
                 handleSubmitAdds,
-                handleVolverAdds
+                handleVolverAdds,
+                mostrarConfirm,
+                handleSubmitConfirm
             }}
         >{children}
         </MultiContext.Provider>

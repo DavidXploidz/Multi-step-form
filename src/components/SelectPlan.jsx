@@ -8,10 +8,13 @@ export default function SelectPlan() {
 
     const { handleSubmitPlan, handleVolverInfo } = useMulti();
 
-    const [plan, setPlan] = useState({});
+    const [plan, setPlan] = useState({
+        title: 'arcade',
+        price: 9
+    });
 
     const [frecuency, setFrecuency] = useState(false);
-    const [selected, setSelected] = useState(null);
+    const [selected, setSelected] = useState('arcade');
 
     useEffect(() => {
         handleClickToggle();

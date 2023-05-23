@@ -17,6 +17,14 @@
 .summary__content:last-child{
     margin-bottom: 0;
 }
+.summary__change{
+    color: var(--CoolGray);
+    display: block;
+    text-decoration: underline;
+}
+.summary__change:hover{
+    cursor: pointer;
+}
 .summary__title{
     color: var(--MarineBlue);
     font-weight: 500;
