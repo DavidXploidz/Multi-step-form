@@ -37,3 +37,23 @@
     display: block;
     letter-spacing: 1px;
 }
+/* Version Mobile */
+@media (width <= 768px ){ 
+    .aside{
+        background-image: url('/images/bg-sidebar-mobile.svg');
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 170px;
+    }
+    .aside__p{
+        display: none; 
+    }
+}

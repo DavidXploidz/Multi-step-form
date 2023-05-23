@@ -3,14 +3,19 @@
 }
 .adds__card{
     display: grid;
-    grid-template-columns: 30px 1fr 100px;
+    grid-template-columns: 30px 1fr 50px;
     align-items: center;
-    gap: 1rem;
+    gap: .5rem;
     padding: 1rem;
     border: 1px solid var(--LightGray);
     border-radius: var(--radius-xs);
     margin-bottom: 1rem;
-    /* background-color: var(--Magnolia); */
+}
+@media (min-width: 768px){ 
+    .adds__card{
+        grid-template-columns: 30px 1fr 100px;
+        gap: 1rem;
+    }
 }
 .adds__card--active{
     background-color: var(--Magnolia);
